@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameZone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Hola cat 5!</p>
+    <header>
+        <h1>Acción</h1>
+        <select onchange="window.location.href=this.value;">
+            <option value="categoria1.html">Supervivencia</option>
+            <option value="categoria2.html">Plataforma</option>
+            <option value="categoria3.html">Shooter</option>
+            <option value="categoria4.html">Aventura</option>
+            <option value="categoria5.html">Acción</option>
+        </select>
+        <a href="home.html" class="volver-inicio">Volver al Inicio</a>
+    </header>
+    <div class="juegos-container">
+        <div class="juego">
+            <img src="image/godofwar.jpg" alt="Juego 1">
+            <h2>God of War</h2>
+            <p> God of War es un juego de acción y aventuras que sigue la historia de Kratos mientras lucha contra dioses y monstruos del panteón griego. </p>
+            <p>Precio: $40.000</p>
+        </div>
+        <div class="juego">
+            <img src="image/residentevil.jpg">
+            <h2>Resident Evil</h2>
+            <p>Resident Evil es una serie de juegos de terror y supervivencia en los que los jugadores deben enfrentarse a hordas de zombies y otras criaturas mutantes.</p>
+            <p>Precio: $45.000</p>
+        </div>
+    </div>
+    <footer>
+        <p>@ 2024 GameZone</p>
+    </footer>    
 </body>
 </html>

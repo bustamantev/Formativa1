@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameZone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Hola cat 4!</p>
+    <header>
+        <h1>Aventura</h1>
+        <select onchange="window.location.href=this.value;">
+            <option value="categoria1.html">Supervivencia</option>
+            <option value="categoria2.html">Plataforma</option>
+            <option value="categoria3.html">Shooter</option>
+            <option value="categoria4.html">Aventura</option>
+            <option value="categoria5.html">Acción</option>
+        </select>
+        <a href="home.html" class="volver-inicio">Volver al Inicio</a>
+    </header>
+    <div class="juegos-container">
+        <div class="juego">
+            <img src="image/lasofus.jpg"alt="Juego 1">
+            <h2>The Last of Us</h2>
+            <p>Last of Us es un juego de acción y aventuras que sigue la historia de Joel y Ellie mientras luchan por sobrevivir en un mundo postapocalíptico infestado de infectados. </p>
+            <p>Precio: $35.000</p>
+        </div>
+        <div class="juego">
+            <img src="image/zelda.jpg">
+            <h2>Legend of Zelda</h2>
+            <p>Legend of Zelda es una serie de juegos de aventuras en la que los jugadores asumen el papel de Link, quien debe rescatar a la princesa Zelda y derrotar al malvado Ganon.</p>
+            <p>Precio: $25.000</p>
+        </div>
+    </div>
+    <footer>
+        <p>@ 2024 GameZone</p>
+    </footer>    
 </body>
 </html>

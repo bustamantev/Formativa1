@@ -1,21 +1,22 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Arial Narrow';
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color:#120326;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 50px;
+    background-color:#120326;
+    color: #F2F2F2;
+    padding: 20px;
     text-align: center;
 }
 nav {
-    background-color:darkviolet;
+    text-align: center;
+    background-color:#0D0D0D;
     padding: 10px;
-    color:#fff;
+    color:#F2F2F2;
 }
 nav ul {
     list-style-type: none;
@@ -32,18 +33,37 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #F2F2F2;
     text-decoration: none;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #120326;
+    color: #F2F2F2;
     padding: 10px;
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
+}
+.volver-inicio {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color:black;
+    color: #F2F2F2;
+    padding: 10px 15px;
+    border-radius: 5px; 
+    text-decoration: none;
+}
+select {
+    display:flex;
+    margin-right: 10px;
+    background-color: black;
+    color: #F2F2F2;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 /* Estilos para las tarjetas de juegos */
 .juegos-container {
@@ -54,36 +74,31 @@ footer {
 }
 
 .juego {
-    background-color: rgba(138, 43, 226, 0.5); /* Color violeta traslúcido */
+    background-color: #853C64;
+    color: #F2F2F2;
     border-radius: 10px;
-    width: 45%; /* Ancho de cada tarjeta */
+    width: 20%; 
     margin-bottom: 20px;
     padding: 20px;
     box-sizing: border-box;
-    display: flex; /* Mostrar elementos en línea */
-}
+   }
 
-.juego img {
-    width: 30%; 
+   .juego img {
+    width: 200px; /* Ancho deseado */
+    height: 280px; /* Altura deseada */
     border-radius: 10px;
-    margin-right: 20px;
-    flex-shrink: 0; 
+    margin:0 auto;
+    display: block;
 }
 
-.juego-info {
+.juego h2 {
     width: 70%; 
     display: flex; 
     flex-direction: column; 
 }
 
-.juego h2 {
-    margin-top: 0;
-}
-
 .juego p {
-    margin-bottom: 5px;
-}
-
-.precio {
-    margin-top: auto; 
+    width: 70%; 
+    display: flex; 
+    flex-direction: column; 
 }

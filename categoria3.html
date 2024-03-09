@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameZone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Hola cat 3!</p>
+    <header>
+        <h1>Shooter</h1>
+        <select onchange="window.location.href=this.value;">
+            <option value="categoria1.html">Supervivencia</option>
+            <option value="categoria2.html">Plataforma</option>
+            <option value="categoria3.html">Shooter</option>
+            <option value="categoria4.html">Aventura</option>
+            <option value="categoria5.html">Acción</option>
+        </select>
+        <a href="home.html" class="volver-inicio">Volver al Inicio</a>
+    </header>
+    <div class="juegos-container">
+        <div class="juego">
+            <img src="image/cod.jpeg" alt="Juego 1">
+            <h2>Call of Duty</h2>
+            <p>Call of Duty es una serie de juegos de disparos en primera persona que se centran en combates realistas y multijugador. </p>
+            <p>Precio: $30.000</p>
+        </div>
+        <div class="juego">
+            <img src="image/doom.jpg">
+            <h2>Doom</h2>
+            <p> Doom es un juego de disparos en primera persona que sigue al marine espacial Doomguy mientras lucha contra hordas de demonios en Marte y el Infierno.</p>
+            <p>Precio: $25.000</p>
+        </div>
+    </div>
+    <footer>
+        <p>@ 2024 GameZone</p>
+    </footer>    
 </body>
 </html>

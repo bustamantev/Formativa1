@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameZone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Hola cat 2!</p>
+    <header>
+        <h1>Plataforma</h1>
+        <select onchange="window.location.href=this.value;">
+            <option value="categoria1.html">Supervivencia</option>
+            <option value="categoria2.html">Plataforma</option>
+            <option value="categoria3.html">Shooter</option>
+            <option value="categoria4.html">Aventura</option>
+            <option value="categoria5.html">Acción</option>
+        </select>
+        <a href="home.html" class="volver-inicio">Volver al Inicio</a>
+    </header>
+    <div class="juegos-container">
+        <div class="juego">
+            <img src="image/mariowonder.jpg" alt="Juego 1">
+            <h2>Super Mario Wonder</h2>
+            <p>Super Mario WONDER es un juego de plataformas en el que los jugadores asumen el papel de Mario y otros personajes del universo de Mario para superar obstáculos y derrotar enemigos.</p>
+            <p>Precio: $20.000</p>
+        </div>
+        <div class="juego">
+            <img src="image/donkee.jpg">
+            <h2> Donkey Kong Tropical Freeze</h2>
+            <p>Donkey Kong Tropical Freeze es un juego de plataformas en el que los jugadores controlan a Donkey Kong y sus amigos para recuperar su isla de las garras de los vikingos.</p>
+            <p>Precio: $25.000</p>
+        </div>
+    </div>
+    <footer>
+        <p>@ 2024 GameZone</p>
+    </footer>    
 </body>
 </html>

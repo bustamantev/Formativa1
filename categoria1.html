@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameZone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Categoría 1 - Juegos</h1>
-        <a href="home.html">Volver al Inicio</a>
+        <h1>Supervivencia</h1>
+        <select onchange="window.location.href=this.value;">
+            <option value="categoria1.html">Supervivencia</option>
+            <option value="categoria2.html">Plataforma</option>
+            <option value="categoria3.html">Shooter</option>
+            <option value="categoria4.html">Aventura</option>
+            <option value="categoria5.html">Acción</option>
+        </select>
+        <a href="home.html" class="volver-inicio">Volver al Inicio</a>
     </header>
-    
     <div class="juegos-container">
         <div class="juego">
-            <img src="juego-libre-en-ni-os.jpg" alt="Juego 1">
-            <h2>Juego 1</h2>
-            <p>Descripción del juego 1.</p>
-            <p>Precio: $20</p>
+            <img src="image/minecraft.jpg" alt="Juego 1">
+            <h2>Minecraft</h2>
+            <p> Minecraft es un juego de construcción y exploración en un mundo abierto, donde los jugadores pueden crear y destruir bloques para construir estructuras y explorar entornos generados aleatoriamente.</p>
+            <p>Precio: $20.000</p>
         </div>
         <div class="juego">
-            <img src="juego-libre-en-ni-os.jpg">
-            <h2>Juego 2</h2>
-            <p>Descripción del juego 2Descripción del juego 2Descripción del juego 2Descripción del juego 2Descripción del juego 2Descripción del juego 2Descripción del juego 2</p>
-            <p>Precio: $25</p>
+            <img src="image/ARK.jpeg">
+            <h2>ARK: Survival Evolved</h2>
+            <p>ARK: Survival Evolved es un juego de supervivencia en el que los jugadores deben cazar, recolectar recursos y construir refugios para sobrevivir en una isla llena de dinosaurios y otras criaturas.</p>
+            <p>Precio: $25.000</p>
         </div>
     </div>
-
     <footer>
-        <p>@ 2024 Nombre Pyme</p>
+        <p>@ 2024 GameZone</p>
     </footer>    
 </body>
 </html>
