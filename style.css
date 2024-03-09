@@ -3,22 +3,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
-
 nav {
     background-color:darkviolet;
     padding: 10px;
-    text-align: center;
     color:#fff;
 }
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -28,8 +26,9 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 10px;
+    text-align: center;
 }
 
 nav ul li a {
@@ -46,6 +45,45 @@ footer {
     bottom: 0;
     width: 100%;
 }
-div {
-    background-color: aliceblue;
+/* Estilos para las tarjetas de juegos */
+.juegos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.juego {
+    background-color: rgba(138, 43, 226, 0.5); /* Color violeta traslúcido */
+    border-radius: 10px;
+    width: 45%; /* Ancho de cada tarjeta */
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex; /* Mostrar elementos en línea */
+}
+
+.juego img {
+    width: 30%; 
+    border-radius: 10px;
+    margin-right: 20px;
+    flex-shrink: 0; 
+}
+
+.juego-info {
+    width: 70%; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.juego h2 {
+    margin-top: 0;
+}
+
+.juego p {
+    margin-bottom: 5px;
+}
+
+.precio {
+    margin-top: auto; 
 }
