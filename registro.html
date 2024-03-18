@@ -72,13 +72,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Contraseña</label>
-                            <input type="password" name="" id="" class="form-control" id="pass1">
-                            <small class="text-danger" id="pass1-error"></small>
+                            <input type="password" name="" class="form-control" id="contrasena">
+                            <small class="text-danger" id="contrasena-error"></small>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Repetir contraseña</label>
-                            <input type="password" name="" id="" class="form-control" id="pass2">
-                            <small class="text-danger" id="pass2-error"></small>
+                            <input type="password" name="" class="form-control" id="contrasenavalidacion">
+                            <small class="text-danger" id="contrasenavalidacion-error"></small>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Dirección:</label>
@@ -103,25 +103,73 @@
   <script src="jquery/jquery-3.7.1.min.js"></script>
   <script>
     $(document).ready(function(){
-        $('#registroForm').submit(function(event){
-            event.preventDefault();
-            $('#nombre-error').text('')
-            $('#fechanac-error').text('')
-            $('#usuario-error').text('')
-            $('#email-error').text('')
-            $('#pass1-error').text('')
-            $('#pass2-error').text('')
-            $('#direccion-error').text('')
+    $('#registroForm').submit(function(event){
+        event.preventDefault();
+        $('#nombre-error').text('');
+        $('#fechanac-error').text('');
+        $('#usuario-error').text('');
+        $('#email-error').text('');
+        $('#contrasena-error').text('');
+        $('#contrasenavalidacion-error').text('');
+        $('#direccion-error').text('');
 
-            if($('#nombre').val() === '') {
-                $('#nombre-error').text('Por favor ingresa tu nombre')
-                return;
-            }
-            this.submit()
+        var nombre = $('#nombre').val();
+        var fechanac = $('#fechanac').val();
+        var usuario = $('#usuario').val();
+        var email = $('#email').val();
+        var contrasena = $('#contrasena').val();
+        var contrasenavalidacion = $('#contrasenavalidacion').val();
+        var direccion = $('#direccion').val();
 
+        if(nombre === '') {
+            $('#nombre-error').text('Por favor ingresa tu nombre');
+            return;
+        }
+        if(fechanac === '') {
+            $('#fechanac-error').text('Por favor ingresa tu fecha de nacimiento');
+            return;
+        }
+        if(usuario === '') {
+            $('#usuario-error').text('Por favor ingresa tu nombre de usuario');
+            return;
+        }
+        if(email === '') {
+            $('#email-error').text('Por favor ingresa tu email');
+            return;
+        }
+        if(contrasena === '') {
+            $('#contrasena-error').text('Por favor ingresa una contraseña');
+            return;
+        }
 
-        });
-    })
+        // Validacion de contraseña
+        var passPattern = /^(?=.*\d)(?=.*[A-Z]).{6,18}$/;
+        if(!passPattern.test(contrasena)) {
+            $('#contrasena-error').text('La contraseña debe contener al menos un número y una letra en mayúscula, y tener entre 6 y 18 caracteres');
+            return;
+        }
+
+        // Validar que las contraseñas coincidan
+        if(contrasena !== contrasenavalidacion) {
+            $('#contrasenavalidacion-error').text('Las contraseñas no coinciden');
+            return;
+        }
+
+        // Validar que la persona sea mayor de  13 años
+        var today = new Date();
+        var birthDate = new Date(fechanac);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var monthDiff = today.getMonth() - birthDate.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        if (age < 13) {
+            $('#fechanac-error').text('Debes tener al menos 13 años para registrarte');
+            return;
+        }
+        this.submit();
+    });
+});
   </script>
   </body>
 </html>
