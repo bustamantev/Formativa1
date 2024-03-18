@@ -1,104 +1,21 @@
-/* Estilos generales */
-body {
-    font-family:'Arial Narrow';
-    margin: 0;
-    padding: 0;
-    background-color:#120326;
-}
-
-header {
-    background-color:#120326;
-    color: #F2F2F2;
-    padding: 20px;
-    text-align: center;
-}
-nav {
-    text-align: center;
-    background-color:#0D0D0D;
-    padding: 10px;
-    color:#F2F2F2;
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  body {
     display: flex;
-    justify-content:space-around;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-    text-align: center;
-}
-
-nav ul li a {
-    color: #F2F2F2;
-    text-decoration: none;
-}
-
-footer {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  .footer {
+    background-color: #120326; 
+    color: white; 
+  }
+  
+  header {
     background-color: #120326;
-    color: #F2F2F2;
-    padding: 10px;
+    color: white; 
     text-align: center;
-    bottom: 0;
-    width: 100%;
-}
-.volver-inicio {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color:black;
-    color: #F2F2F2;
-    padding: 10px 15px;
-    border-radius: 5px; 
-    text-decoration: none;
-}
-select {
-    display:flex;
-    margin-right: 10px;
-    background-color: black;
-    color: #F2F2F2;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-/* Estilos para las tarjetas de juegos */
-.juegos-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.juego {
-    background-color: #853C64;
-    color: #F2F2F2;
-    border-radius: 10px;
-    width: 20%; 
-    margin-bottom: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-   }
-
-   .juego img {
-    width: 200px; /* Ancho deseado */
-    height: 280px; /* Altura deseada */
-    border-radius: 10px;
-    margin:0 auto;
-    display: block;
-}
-
-.juego h2 {
-    width: 70%; 
-    display: flex; 
-    flex-direction: column; 
-}
-
-.juego p {
-    width: 70%; 
-    display: flex; 
-    flex-direction: column; 
-}
+    padding: 20px 0; 
+  }
