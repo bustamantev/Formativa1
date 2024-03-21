@@ -3,21 +3,31 @@
     flex-direction: column;
     min-height: 100vh;
   }
-  
+  #cuerpo {
+    background-color: #333333;
+    font-family: 'K2D', sans-serif;
+  }
+  #logo {
+    width: 120px;
+    display: flex;
+  }
+  #enlaces {
+    display: flex;
+    justify-content: center;
+  }
   .content {
     flex: 1;
   }
   
   .footer {
-    background-color: #120326; 
+    background-color: #000000; 
     color: white; 
   }
   
   header {
-    background-color: #120326;
-    color: white; 
+    background-color: #000000;
     text-align: center;
-    padding: 20px 0; 
+    padding: 15px 0; 
   }
 label{
   color: white;
